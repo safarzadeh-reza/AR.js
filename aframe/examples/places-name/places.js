@@ -1,6 +1,6 @@
 
 window.onload = () => {
-    let method = 'dynamic';
+    let method = 'static';
 
     // if you want to statically add places, de-comment following line:
     // method = 'static';
@@ -14,7 +14,7 @@ window.onload = () => {
         return navigator.geolocation.getCurrentPosition(function (position) {
 
             // than use it to load from remote APIs some places nearby
-            staticLoadPlaces(position.coords)
+            dynamicLoadPlaces(position.coords)
                 .then((places) => {
                     renderPlaces(places);
                 })
