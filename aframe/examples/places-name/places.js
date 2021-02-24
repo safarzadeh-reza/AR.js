@@ -1,6 +1,7 @@
 
 window.onload = () => {
     
+    
     let method = 'static';
 
     // if you want to statically add places, de-comment following line:
