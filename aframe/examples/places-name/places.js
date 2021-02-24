@@ -14,7 +14,7 @@ window.onload = () => {
         return navigator.geolocation.getCurrentPosition(function (position) {
 
             // than use it to load from remote APIs some places nearby
-            dynamicLoadPlaces(position.coords)
+            staticLoadPlaces(position.coords)
                 .then((places) => {
                     renderPlaces(places);
                 })
@@ -32,12 +32,20 @@ window.onload = () => {
 function staticLoadPlaces() {
     return [
         {
-            name: "Your place name",
+            name: "place_1",
             location: {
-                lat: 44.493271, // change here latitude if using static data
-                lng: 11.326040, // change here longitude if using static data
+                lat: 35.7436241, // change here latitude if using static data
+                lng: 51.3093359, // change here longitude if using static data
             }
         },
+        {
+            name: "place_2",
+            location: {
+                lat: 35.74366975682799, // change here latitude if using static data
+                lng: 51.30940344961865, // change here longitude if using static data
+            }
+        },
+        
     ];
 }
 
